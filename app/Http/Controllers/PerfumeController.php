@@ -48,11 +48,6 @@ class PerfumeController extends Controller
     public function editPerfume( $id ) {
 
         $perfume = Perfume::find( $id );
-        $validated = $request->validate([
-            'name' => 'required',
-            'type' => 'required',
-            'price' => 'required'
-        ]);
 
 
         return view( "edit_perfume", [
